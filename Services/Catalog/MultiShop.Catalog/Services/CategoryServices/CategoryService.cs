@@ -10,13 +10,26 @@ namespace MultiShop.Catalog.Services.CategoryServices
     {
         private readonly IMongoCollection<Category> _categoryCollection;
         private readonly IMapper _mapper;
+        private readonly ILogger<CategoryService> _logger;
 
-        public CategoryService(IMapper mapper, IDatabaseSettings _databaseSettings)
+        public CategoryService(IMapper mapper, IDatabaseSettings _databaseSettings, ILogger<CategoryService> logger)
         {
-            var client = new MongoClient(_databaseSettings.ConnectionString);
-            var database = client.GetDatabase(_databaseSettings.DatabaseName);
-            _categoryCollection = database.GetCollection<Category>(_databaseSettings.CategoryCollectionName);
-            _mapper = mapper;
+            _mapper = mapper; 
+            _logger = logger;
+
+            try
+            {
+                var client = new MongoClient(_databaseSettings.ConnectionString);
+                var database = client.GetDatabase(_databaseSettings.DatabaseName);
+                _categoryCollection = database.GetCollection<Category>(_databaseSettings.CategoryCollectionName);
+              //  _logger.LogInformation("Veritabanmına başarılı şekilde bağlandıldı.");
+            }
+            catch (Exception e)
+            {
+               // _logger.LogInformation("hata : " + e.Message);
+                throw;
+            }
+           
         }
 
         public async Task CreateCategoryAsync(CreateCategoryDto createCategoryDto)
