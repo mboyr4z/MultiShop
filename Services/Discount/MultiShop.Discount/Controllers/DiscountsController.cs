@@ -10,23 +10,26 @@ namespace MultiShop.Discount.Controllers
     public class DiscountsController : ControllerBase
     {
         private readonly IDiscountService _discountService;
+        private readonly ILogger<DiscountsController> _logger;
 
-        public DiscountsController(IDiscountService discountService)
+        public DiscountsController(IDiscountService discountService, ILogger<DiscountsController> logger)
         {
             _discountService = discountService;
+            _logger = logger;
         }
 
         [HttpGet]
         public async Task<IActionResult> DiscountCouponList()
         {
-            var values = _discountService.GetAllDiscountCouponsAsync();
+            _logger.LogInformation("get isteği alındı");
+            var values = await _discountService.GetAllDiscountCouponsAsync();
             return Ok(values);
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetDiscountCouponById(int id)
         {
-            var values = _discountService.GetByIdDiscountCouponDtoAsync(id);
+            var values = await  _discountService.GetByIdDiscountCouponDtoAsync(id);
             return Ok(values);
         }
 

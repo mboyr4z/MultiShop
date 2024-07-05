@@ -8,10 +8,15 @@ namespace MultiShop.Discount.Services
     public class DiscountService : IDiscountService
     {
         private readonly DapperContext _context;
+        private readonly ILogger<DiscountService> _logger;
 
-        public DiscountService(DapperContext context)
+        public DiscountService(DapperContext context, ILogger<DiscountService> logger)
         {
+
             _context = context;
+            _logger = logger;
+
+            _logger.LogInformation("discount service gelindi");
         }
 
         public async Task CreateDiscountCouponAsync(CreateDiscountCouponDto createCouponDto)
@@ -45,10 +50,13 @@ namespace MultiShop.Discount.Services
 
         public async Task<List<ResultDiscountCouponDto>> GetAllDiscountCouponsAsync()
         {
+            _logger.LogInformation("tüm discountlar isteniyor");
             string query = "Select * From Coupons";
+
             using (var connection = _context.CreateConnection())
             {
                 var values = await connection.QueryAsync<ResultDiscountCouponDto>(query);
+                _logger.LogInformation("istendi");
                 return values.ToList();
             }
         }
@@ -61,7 +69,7 @@ namespace MultiShop.Discount.Services
 
             using (var connection = _context.CreateConnection())
             {
-                var values = await connection.QueryFirstOrDefaultAsync<GetByIdDiscountCouponDto>(query);
+                var values = await connection.QueryFirstOrDefaultAsync<GetByIdDiscountCouponDto>(query, parameters);
                 return values;
             }
         }
