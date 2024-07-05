@@ -9,6 +9,6 @@
 
         public bool IsActive { get; set; }
 
-        public DateTime Validdate { get; set; }
+        public DateTime ValidDate { get; set; }
     }
 }
