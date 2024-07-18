@@ -45,7 +45,7 @@ namespace MultiShop.Order.WebApi.Controllers
             return Ok("Satın alma başarıyla güncellendi");
         }
 
-        [HttpPut]
+        [HttpDelete]
         public async Task<IActionResult> DeleteOrdering(RemoveOrderingCommand command)      // buraya bir bak
         {
             await _mediator.Send(command);

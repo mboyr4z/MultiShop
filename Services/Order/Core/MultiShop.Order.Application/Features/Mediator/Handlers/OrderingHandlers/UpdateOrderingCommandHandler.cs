@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace MultiShop.Order.Application.Features.Mediator.Handlers.OrderingHandlers
 {
     public class UpdateOrderingCommandHandler : IRequestHandler<UpdateOrderingCommand>
-    {,
+    {
          private readonly IRepository<Ordering> _repository;
 
         public UpdateOrderingCommandHandler(IRepository<Ordering> repository)

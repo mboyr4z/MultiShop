@@ -12,7 +12,7 @@ namespace MultiShop.Order.Application.Features.Mediator.Queries.OrderingQueries
     {
         public int Id { get; set; }
 
-        public GetOrderingQuery(int id)
+        public GetOrderingByIdQuery(int id)
         {
             Id = id;
         }
