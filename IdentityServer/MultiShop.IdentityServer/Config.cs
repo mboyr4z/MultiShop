@@ -66,7 +66,9 @@ namespace MultiShop.IdentityServer
                 IdentityServerConstants.StandardScopes.Email,
                 IdentityServerConstants.StandardScopes.OpenId,
                 IdentityServerConstants.StandardScopes.Profile,
-                }
+                },
+                AccessTokenLifetime = 600, // 5 dakika
+
                 
                 
             },
