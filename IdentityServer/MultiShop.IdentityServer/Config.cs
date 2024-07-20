@@ -20,9 +20,9 @@ namespace MultiShop.IdentityServer
 
         public static IEnumerable<IdentityResource> IdentityResources => new IdentityResource[]
         {
-            //new IdentityResources.OpenId(),
-            //new IdentityResources.Email(),
-            //new IdentityResources.Profile(),
+            new IdentityResources.OpenId(),
+            new IdentityResources.Email(),
+            new IdentityResources.Profile(),
 
         };
 
@@ -43,7 +43,7 @@ namespace MultiShop.IdentityServer
                 ClientName = "Multi Shop Visitor User",
                 AllowedGrantTypes = GrantTypes.ClientCredentials,
                 ClientSecrets = {new Secret("multishopsecret".Sha256())},
-                AllowedScopes = { "CatalogReadPermission" }
+                AllowedScopes = { "DiscountFullPermission" }
             },
 
             // manager
