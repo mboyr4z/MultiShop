@@ -13,7 +13,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 {
     opt.Authority = builder.Configuration["IdentityServerUrl"];
     opt.RequireHttpsMetadata = false;
-    opt.Audience = "ResourceCatalog";       // kýsýtlama ayarý
+    opt.Audience = "ResourceCargo";       // kýsýtlama ayarý
 });
 
 builder.Services.AddDbContext<CargoContext>();
