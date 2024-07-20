@@ -28,6 +28,7 @@ namespace MultiShop.IdentityServer
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddLocalApiAuthentication();   // servis kayudım autorization için
             services.AddControllersWithViews();
 
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -81,6 +82,7 @@ namespace MultiShop.IdentityServer
 
             app.UseRouting();
             app.UseIdentityServer();
+            app.UseAuthentication(); // authentication kullanım
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
