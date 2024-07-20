@@ -3,3 +3,4 @@ Catalog  : 7070			-> MongoDb
 Discount : 7071			-> Sql Server  -> Win Auth
 Order    : 7072			-> Sql Server  -> Docker
 Cargo    : 7073			-> Sql Server  -> Docker
+Basket   : 7074			-> Redis
