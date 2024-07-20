@@ -1,4 +1,5 @@
-Identity : 5001
-Catalog  : 7070
-Discount : 7071
-Order    : 7072
+Identity : 5001			-> Sql Server  -> Docker
+Catalog  : 7070			-> MongoDb
+Discount : 7071			-> Sql Server  -> Win Auth
+Order    : 7072			-> Sql Server  -> Docker
+Cargo    : 7073			-> Sql Server  -> Docker
