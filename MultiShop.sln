@@ -50,7 +50,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.DataAccessL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.DtoLayer", "Services\Cargo\MultiShop.Cargo.DtoLayer\MultiShop.Cargo.DtoLayer.csproj", "{D0CC383C-C705-4EC3-8E0A-7450C20CD618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.WebApi", "Services\Cargo\MultiShop.Cargo.WebApi\MultiShop.Cargo.WebApi.csproj", "{B2820A82-D58A-4A37-A930-9D0C12076E96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiShop.Cargo.WebApi", "Services\Cargo\MultiShop.Cargo.WebApi\MultiShop.Cargo.WebApi.csproj", "{A5049B83-66DB-45D3-BC66-30A9D1BF903D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,10 +102,10 @@ Global
 		{D0CC383C-C705-4EC3-8E0A-7450C20CD618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0CC383C-C705-4EC3-8E0A-7450C20CD618}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0CC383C-C705-4EC3-8E0A-7450C20CD618}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B2820A82-D58A-4A37-A930-9D0C12076E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B2820A82-D58A-4A37-A930-9D0C12076E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B2820A82-D58A-4A37-A930-9D0C12076E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B2820A82-D58A-4A37-A930-9D0C12076E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5049B83-66DB-45D3-BC66-30A9D1BF903D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5049B83-66DB-45D3-BC66-30A9D1BF903D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5049B83-66DB-45D3-BC66-30A9D1BF903D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5049B83-66DB-45D3-BC66-30A9D1BF903D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -129,7 +129,7 @@ Global
 		{A1A3EE84-4817-46D3-AFF4-9B947012E6CA} = {265999ED-A730-4482-91F8-C9C693FFA340}
 		{32BC2170-0418-4EF8-AD92-6AEE1ECC1A55} = {265999ED-A730-4482-91F8-C9C693FFA340}
 		{D0CC383C-C705-4EC3-8E0A-7450C20CD618} = {265999ED-A730-4482-91F8-C9C693FFA340}
-		{B2820A82-D58A-4A37-A930-9D0C12076E96} = {265999ED-A730-4482-91F8-C9C693FFA340}
+		{A5049B83-66DB-45D3-BC66-30A9D1BF903D} = {265999ED-A730-4482-91F8-C9C693FFA340}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {901FF2F1-4240-401A-8128-297568B4C0F1}

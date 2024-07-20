@@ -1,4 +1,5 @@
-﻿using MultiShop.Cargo.DataAccessLayer.Abstract;
+﻿using MultiShop.Cargo.BusinessLayer.Abstract;
+using MultiShop.Cargo.DataAccessLayer.Abstract;
 using MultiShop.Cargo.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MultiShop.Cargo.BusinessLayer.Concrete
 {
-    public class CargoOperationManager : ICargoOperationDal
+    public class CargoOperationManager : ICargoOperationService
     {
         private readonly ICargoOperationDal _cargoOperationDal;
 
@@ -16,29 +17,39 @@ namespace MultiShop.Cargo.BusinessLayer.Concrete
         {
             _cargoOperationDal = cargoOperationDal;
         }
-        public void Delete(int id)
+      
+       
+        
+       
+        public void TDelete(int id)
         {
             _cargoOperationDal.Delete(id);
+
         }
 
-        public List<CargoOperation> GetAll()
+        public List<CargoOperation> TGetAll()
         {
             return _cargoOperationDal.GetAll();
         }
 
-        public CargoOperation GetById(int id)
+        public CargoOperation TGetById(int id)
         {
             return _cargoOperationDal.GetById(id);
+
         }
 
-        public void Insert(CargoOperation entity)
+        public void TInsert(CargoOperation entity)
         {
             _cargoOperationDal.Insert(entity);
+
         }
 
-        public void Update(CargoOperation entity)
+        public void TUpdate(CargoOperation entity)
         {
             _cargoOperationDal.Update(entity);
+
         }
+
+      
     }
 }
