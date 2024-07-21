@@ -22,6 +22,7 @@ namespace MultiShop.Basket.Controllers
         [HttpGet]
         public async Task<IActionResult> GetMyBasketDetail()
         {
+            var user = User.Claims;
             var userId = _loginService.GetUserId;
             var values = _basketService.GetBasket(userId);
 
