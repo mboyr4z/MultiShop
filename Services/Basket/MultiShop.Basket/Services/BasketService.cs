@@ -1,5 +1,6 @@
 ﻿using MultiShop.Basket.Dtos;
 using MultiShop.Basket.Settings;
+using StackExchange.Redis;
 using System.Text.Json;
 
 namespace MultiShop.Basket.Services
@@ -19,10 +20,20 @@ namespace MultiShop.Basket.Services
         }
 
 
+       
         public async Task<BasketTotalDto> GetBasket(string userId)
         {
-            var existBasket = await _redisService.GetDb().StringGetAsync(userId);
-            return JsonSerializer.Deserialize<BasketTotalDto>(existBasket);
+            RedisValue existBasket = await _redisService.GetDb().StringGetAsync(userId);
+
+            if (string.IsNullOrEmpty(existBasket))
+            {
+                // Handle the case where the basket for the user does not exist
+                return null; // or throw an exception, depending on your logic
+            }
+            
+            BasketTotalDto basketTotalDto = JsonSerializer.Deserialize<BasketTotalDto>(existBasket);
+
+            return basketTotalDto;
         }
 
         public async Task SaveBasket(BasketTotalDto basketTotalDto)

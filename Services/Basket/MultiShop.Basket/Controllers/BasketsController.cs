@@ -24,7 +24,7 @@ namespace MultiShop.Basket.Controllers
         {
             var user = User.Claims;
             var userId = _loginService.GetUserId;
-            var values = _basketService.GetBasket(userId);
+            BasketTotalDto values = await _basketService.GetBasket(userId);
 
             return Ok(values);
         }
