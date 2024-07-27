@@ -33,7 +33,7 @@ namespace MultiShop.WebUI.Areas.Admin.Controllers
 			ViewBag.headTitle = "Ürün İşlemleri";
 
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:7070/api/Products");
+			var responseMessage = await client.GetAsync("https://localhost:7070/api/Products/ProductListWithCategory");
 
 			if (responseMessage.IsSuccessStatusCode)
 			{
