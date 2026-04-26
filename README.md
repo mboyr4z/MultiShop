@@ -175,24 +175,10 @@ MultiShop/
 ## 📸 Ekran Görüntüleri
 
 ### Ana Sayfa
-<!-- Ana sayfa ekran görüntüsünü buraya ekle -->
-![Ana Sayfa](images/homepage.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/21783c21-becf-4659-865a-94b1e5d71a2b" />
 
-### Ürün Listesi
-<!-- Ürün listesi ekran görüntüsünü buraya ekle -->
-![Ürün Listesi](images/products.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1609af8b-62ff-4cdc-a2a6-8b1b1e1735c3" />
 
-### Ürün Detay
-<!-- Ürün detay ekran görüntüsünü buraya ekle -->
-![Ürün Detay](images/product-detail.png)
-
-### Admin Paneli
-<!-- Admin paneli ekran görüntüsünü buraya ekle -->
-![Admin Paneli](images/admin.png)
-
-### Swagger API
-<!-- Swagger ekran görüntüsünü buraya ekle -->
-![Swagger](images/swagger.png)
 
 ---
 
